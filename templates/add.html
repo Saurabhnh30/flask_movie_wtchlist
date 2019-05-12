@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Flask Intro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      nav {
+        font-size: 15px;
+      }
+  </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h4>Flask page</h4>
+
+  <nav>
+    <div class="nav-wrapper  grey darken-4">
+      <a href="#" class="brand-logo right">Movie Watchlist</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/">Show</a></li>
+          <li><a href="/add">Add</a></li>
+          <li><a href="/del">Delete</a></li>
+          <li><a href="/update">Update</a></li>
+        </ul>
+    </div>
+  </nav>
+
+      <br>
+      <form action="" method="POST"  enctype="multipart/form-data">
+          <b>_Id:</b>  <input type="number" placeholder="_id" name="_id" required = "True">
+          <b>Name of Movie:</b> <input type="text" placeholder="Movie name" name="name" required = "True">
+          <b>Genre :</b> <input type="text" placeholder="Genre" name="genre" required = "True">
+          <!-- <input type="file" placeholder="image" name="movie_image" required = "True"><br><br> -->
+          <input class="btn btn-default" type="submit" value="submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>

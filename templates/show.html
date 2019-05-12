@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      nav {
+        font-size: 15px;
+      }
+  </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h4>Flask page</h4>
+
+  <nav>
+    <div class="nav-wrapper  grey darken-4" >
+      <a href="#" class="brand-logo right">Movie Watchlist</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/">Show</a></li>
+          <li><a href="/add">Add</a></li>
+          <li><a href="/del">Delete</a></li>
+          <li><a href="/update">Update</a></li>
+        </ul>
+    </div>
+  </nav>
+      <br>
+      {% for val in contacts %}
+      <ul class="collection with-header">
+        
+        <li class="collection-header"><h6><b>Name of Movie:</b> {{val.name}},  <b>Genre:</b> {{ val.genre}}</h6></li>
+      </ul>
+      {% endfor %}
+        <!-- <p class="error"><strong>Error:</strong> {{ error }} -->
+    </div>
+  </body>
+</html>
