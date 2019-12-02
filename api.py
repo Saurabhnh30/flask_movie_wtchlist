@@ -94,7 +94,8 @@ def get_all_contact():
         else:
             return render_template('show.html', contacts=contacts)
     except Exception as e:
-        return dumps({'error' : str(e)})
+        flag = 1
+      
     
 
 if __name__ == '__main__':
