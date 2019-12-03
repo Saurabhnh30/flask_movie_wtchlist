@@ -13,7 +13,7 @@ from pymongo import MongoClient
 from werkzeug.utils import secure_filename
 import os
 
-client = MongoClient('localhost:27017')
+client = MongoClient('0.0.0.0:27017')
 db = client.pymongo_tut
 UPLOAD_FOLDER = os.path.basename('uploads')
 
